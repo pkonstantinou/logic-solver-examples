@@ -23,14 +23,14 @@ const terms = [
   [B, E, H], // Column 2
   [C, F, I], // Column 3
   [A, E, I], // Diagonal 1
-  [C, E, G], // Diagonal 2
+  [C, E, G] // Diagonal 2
 ];
 
 const solver = new Logic.Solver();
 
 //////////////////////////////////////////////////////////////
 each(terms, (term) =>
-  solver.require(Logic.equalBits(Logic.sum(term), targetSum)),
+  solver.require(Logic.equalBits(Logic.sum(term), targetSum))
 );
 
 const solution1 = solver.solve();

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "solve:dinner-guests": "ts-node logic-solver-dg.ts",
-    "solve:magic-squares": "ts-node logic-solver-ms.ts",
+    "solve:dinner-guests": "ts-node logic-solver-dinner-guests.ts",
+    "solve:magic-squares": "ts-node logic-solver-magic-squares.ts",
     "solve:pc": "ts-node logic-solver-pc.ts",
     "solve:sudoku": "ts-node logic-solver-sudoku.ts"
   },
