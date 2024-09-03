@@ -34,10 +34,10 @@ for (let rowIdx = 0; rowIdx < 9; rowIdx++) {
       Logic.greaterThanOrEqual(grid[rowIdx][colIdx], Logic.constantBits(1)),
       Logic.lessThanOrEqual(grid[rowIdx][colIdx], Logic.constantBits(9))
     );
-
-    // 36 * 9 = 324 constraints
-    solver.require(distinctBits(grid[rowIdx]));
   }
+
+  // 36 * 9 = 324 constraints
+  solver.require(distinctBits(grid[rowIdx]));
 }
 
 for (let colIdx = 0; colIdx < 9; colIdx++) {
@@ -78,11 +78,14 @@ const puzzle = [
 
 for (let rowIdx = 0; rowIdx < 9; rowIdx++) {
   for (let colIdx = 0; colIdx < 9; colIdx++) {
-    const n = parseInt(puzzle[rowIdx][colIdx], 10);
-    if (puzzle[rowIdx][colIdx] !== '.') {
-      // 81 constraints
+    const n = puzzle[rowIdx][colIdx];
+    if (n !== '.') {
+      // max 81 constraints
       solver.require(
-        Logic.equalBits(grid[rowIdx][colIdx], Logic.constantBits(n))
+        Logic.equalBits(
+          grid[rowIdx][colIdx],
+          Logic.constantBits(parseInt(n, 10))
+        )
       );
     }
   }
