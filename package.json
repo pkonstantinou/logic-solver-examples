@@ -5,7 +5,7 @@
   "scripts": {
     "solve:dinner-guests": "ts-node src/logic-solver-dinner-guests.ts",
     "solve:magic-squares": "ts-node src/logic-solver-magic-squares.ts",
-    "solve:pc": "ts-node src/logic-solver-pc.ts",
+    "solve:iphone": "ts-node src/logic-solver-iphone.ts",
     "solve:sudoku": "ts-node src/logic-solver-sudoku.ts"
   },
   "keywords": [],
